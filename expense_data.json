@@ -1,0 +1,52 @@
+{
+    "users": [
+        {
+            "username": "dharshu@gmail.com",
+            "password": "d3"
+        }
+    ],
+    "income": 50000.0,
+    "budget": 0,
+    "expenses": [
+        {
+            "amount": 10000.0,
+            "category": "Travel",
+            "date": "2026-05-16"
+        },
+        {
+            "amount": 5000.0,
+            "category": "Food",
+            "date": "2026-05-16"
+        },
+        {
+            "amount": 2500.0,
+            "category": "Shopping",
+            "date": "2026-05-16"
+        },
+        {
+            "amount": 10000.0,
+            "category": "parlor",
+            "date": "2026-05-16"
+        },
+        {
+            "amount": 20000.0,
+            "category": "Vacation",
+            "date": "2026-05-16"
+        },
+        {
+            "amount": 2000.0,
+            "category": "Food",
+            "date": "2026-05-16"
+        },
+        {
+            "amount": 500.0,
+            "category": "jewels",
+            "date": "2026-05-16"
+        },
+        {
+            "amount": 23.0,
+            "category": "tips",
+            "date": "2026-05-16"
+        }
+    ]
+}

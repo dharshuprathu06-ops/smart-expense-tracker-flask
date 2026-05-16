@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body class="center-page">
+
+<div class="form-container">
+
+<h1>💰 Set Budget</h1>
+
+<form method="POST">
+
+<input type="number"
+name="amount"
+placeholder="Enter Budget"
+required>
+
+<button type="submit">
+
+Save Budget
+
+</button>
+<div class="card">
+
+<h3>Budget</h3>
+
+<h2>₹ {{ budget }}</h2>
+
+</div>
+
+</form>
+
+</div>
+
+</body>
+</html>

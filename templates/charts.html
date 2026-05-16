@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Charts</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <h2>💰 Expense Tracker</h2>
+
+        <a href="/">🏠 Dashboard</a>
+
+        <a href="/income">➕ Add Income</a>
+
+        <a href="/expense">➖ Add Expense</a>
+
+        <a href="/balance">📊 Balance</a>
+
+        <a href="/history">📜 History</a>
+
+        <a href="/charts">📈 Charts</a>
+
+    </div>
+
+
+    <!-- MAIN -->
+    <div class="main-content">
+
+        <div class="top-bar">
+
+            <h1>Analytics Dashboard</h1>
+
+            <p>Expense analysis with charts</p>
+
+        </div>
+
+
+        <!-- CHARTS -->
+        <div class="chart-container">
+
+            <div class="chart-box">
+
+                <h2>Pie Chart</h2>
+
+                <img src="{{ url_for('static',
+                         filename='pie_chart.png') }}">
+
+            </div>
+
+            
+            <div class="chart-box">
+
+                <h2>Bar Chart</h2>
+
+                <img src="{{ url_for('static',
+                         filename='bar_chart.png') }}">
+
+            </div>
+            
+
+        </div>
+        
+    </div>
+
+</body>
+
+</html>

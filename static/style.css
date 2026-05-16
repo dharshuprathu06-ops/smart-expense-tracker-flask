@@ -1,0 +1,715 @@
+this also
+/* =====================================================
+   GLOBAL STYLES
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+
+    background:
+    linear-gradient(
+        135deg,
+        #020617,
+        #081229,
+        #0f172a
+    );
+
+    color:white;
+
+    min-height:100vh;
+
+    text-align:center;
+}
+
+
+/* =====================================================
+   CENTER PAGE LAYOUT
+===================================================== */
+
+.center-page{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar{
+
+    width:260px;
+
+    height:100vh;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    padding:35px 25px;
+
+    background:
+    rgba(15,23,42,0.95);
+
+    backdrop-filter:blur(15px);
+
+    border-right:
+    1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+    0 0 25px rgba(0,0,0,0.4);
+}
+
+.sidebar h2{
+
+    color:#38bdf8;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    line-height:1.3;
+
+    margin-bottom:50px;
+}
+
+.sidebar a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:16px 18px;
+
+    margin-bottom:18px;
+
+    text-decoration:none;
+
+    color:#e2e8f0;
+
+    font-size:20px;
+
+    border-radius:14px;
+
+    transition:0.3s;
+}
+
+.sidebar a:hover{
+
+    background:
+    linear-gradient(
+        90deg,
+        #2563eb,
+        #38bdf8
+    );
+
+    transform:translateX(8px);
+
+    box-shadow:
+    0 0 20px rgba(37,99,235,0.5);
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.main-content{
+
+    margin-left:260px;
+
+    flex:1;
+
+    padding:50px;
+}
+
+
+/* =====================================================
+   TOP SECTION
+===================================================== */
+
+.top-bar h1{
+
+    font-size:62px;
+
+    font-weight:800;
+
+    margin-bottom:12px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #ffffff,
+        #60a5fa
+    );
+
+    background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+}
+
+.top-bar p{
+
+    color:#94a3b8;
+
+    font-size:22px;
+
+    margin-bottom:45px;
+}
+
+
+/* =====================================================
+   DASHBOARD CARDS
+===================================================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(260px,1fr));
+
+    gap:30px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    min-height:160px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:35px;
+
+    background:
+    rgba(15,23,42,0.75);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:24px;
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    transition:0.3s;
+}
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-80px;
+
+    right:-80px;
+
+    width:200px;
+
+    height:200px;
+
+    border-radius:50%;
+
+    background:
+    rgba(59,130,246,0.15);
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 0 35px rgba(59,130,246,0.3);
+}
+
+.card h3{
+
+    color:#94a3b8;
+
+    font-size:22px;
+
+    margin-bottom:22px;
+}
+
+.card h2{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:white;
+}
+
+
+/* =====================================================
+   TABLES
+===================================================== */
+
+.table-container{
+
+    margin-top:40px;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    background:
+    rgba(15,23,42,0.8);
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+}
+
+table th{
+
+    padding:20px;
+
+    background:#172554;
+
+    color:#60a5fa;
+
+    font-size:18px;
+}
+
+table td{
+
+    padding:18px;
+
+    color:#e2e8f0;
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.06);
+}
+
+table tr:hover{
+
+    background:
+    rgba(59,130,246,0.08);
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+button,
+.delete-btn{
+
+    border:none;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    padding:16px 32px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    transition:0.3s;
+
+    background:
+    linear-gradient(
+        90deg,
+        #2563eb,
+        #38bdf8
+    );
+}
+
+button:hover,
+.delete-btn:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:
+    0 0 20px rgba(56,189,248,0.5);
+}
+
+
+/* =====================================================
+   FORM CONTAINER
+===================================================== */
+
+.form-container{
+
+    width:100%;
+
+    max-width:700px;
+
+    padding:45px;
+
+    border-radius:28px;
+
+    background:
+    rgba(15,23,42,0.85);
+
+    backdrop-filter:blur(15px);
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+    0 0 35px rgba(0,0,0,0.4);
+
+    animation:fadeIn 0.5s ease;
+}
+
+.form-container h1{
+
+    color:#60a5fa;
+
+    font-size:38px;
+
+    margin-bottom:12px;
+}
+
+.subtitle{
+
+    color:#94a3b8;
+
+    font-size:18px;
+
+    margin-bottom:30px;
+}
+
+.form-container input{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-bottom:22px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#1e293b;
+
+    color:white;
+
+    font-size:16px;
+}
+
+.form-container input:focus{
+
+    outline:none;
+
+    border:1px solid #38bdf8;
+
+    box-shadow:
+    0 0 15px rgba(56,189,248,0.4);
+}
+
+.back-btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    color:#60a5fa;
+
+    font-size:17px;
+
+    text-decoration:none;
+}
+
+.back-btn:hover{
+
+    color:white;
+}
+
+
+/* =====================================================
+   CHARTS
+===================================================== */
+
+.chart-container{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(350px,1fr));
+
+    gap:30px;
+
+    margin-top:40px;
+}
+
+.chart-container img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 0 20px rgba(0,0,0,0.4);
+}
+
+
+/* =====================================================
+   WELCOME BOX
+===================================================== */
+
+.welcome-box{
+
+    margin-top:50px;
+
+    padding:45px;
+
+    text-align:center;
+
+    border-radius:28px;
+
+    background:
+    rgba(15,23,42,0.75);
+
+    backdrop-filter:blur(15px);
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+    0 0 30px rgba(0,0,0,0.3);
+}
+
+.welcome-box h2{
+
+    color:#60a5fa;
+
+    font-size:42px;
+
+    margin-bottom:20px;
+}
+
+.welcome-box p{
+
+    color:#cbd5e1;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+}
+
+.welcome-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+}
+
+.welcome-buttons a{
+
+    padding:16px 28px;
+
+    border-radius:14px;
+
+    color:white;
+
+    font-size:18px;
+
+    text-decoration:none;
+
+    transition:0.3s;
+
+    background:
+    linear-gradient(
+        90deg,
+        #2563eb,
+        #38bdf8
+    );
+}
+
+.welcome-buttons a:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 0 25px rgba(56,189,248,0.4);
+}
+
+
+/* =====================================================
+   ACTION BUTTON
+===================================================== */
+
+.action-btn{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:12px 24px;
+
+    border-radius:10px;
+
+    background:#1e40af;
+
+    color:white;
+
+    font-size:15px;
+
+    text-decoration:none;
+}
+
+
+/* =====================================================
+   ALERT BOXES
+===================================================== */
+
+.alert-box{
+
+    margin-top:20px;
+
+    padding:16px;
+
+    border-radius:12px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:#dc2626;
+
+    box-shadow:
+    0 0 20px rgba(220,38,38,0.4);
+}
+
+.warning-box{
+
+    margin-top:20px;
+
+    padding:16px;
+
+    border-radius:12px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:black;
+
+    background:#f59e0b;
+
+    box-shadow:
+    0 0 20px rgba(245,158,11,0.4);
+}
+
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+@media screen and (max-width:768px){
+
+    .sidebar{
+
+        width:100%;
+
+        height:auto;
+
+        position:relative;
+    }
+
+    .main-content{
+
+        margin-left:0;
+
+        padding:20px;
+    }
+
+    .form-container{
+
+        width:100%;
+    }
+
+    .top-bar h1{
+
+        font-size:38px;
+    }
+
+    .cards{
+
+        grid-template-columns:1fr;
+    }
+}
+
+footer{
+
+margin-top:40px;
+
+color:#94a3b8;
+
+font-size:15px;
+}

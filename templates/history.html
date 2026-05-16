@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Expense History</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static',
+          filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <h2>💰 Expense Tracker</h2>
+
+        <a href="/">🏠 Dashboard</a>
+
+        <a href="/income">➕ Add Income</a>
+
+        <a href="/expense">➖ Add Expense</a>
+
+        <a href="/balance">📊 Balance</a>
+
+        <a href="/history">📜 History</a>
+
+        <a href="/charts">📈 Charts</a>
+
+        <a href="/search">🔎 Search</a>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+        <div class="top-bar">
+
+            <h1>Expense History</h1>
+
+            <p>Track all your recent expenses</p>
+
+        </div>
+
+        <div class="table-container">
+
+            <table>
+
+                <tr>
+
+                    <th>Amount</th>
+
+                    <th>Category</th>
+
+                    <th>Date</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+                {% for item in expenses %}
+
+                <tr>
+
+                    <td>₹ {{ item.amount }}</td>
+
+                    <td>{{ item.category }}</td>
+
+                    <td>{{ item.date }}</td>
+
+                    <td>
+
+                        <a href="/delete/{{ loop.index0 }}"
+                           class="delete-btn">
+
+                           Delete
+
+                        </a>
+
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

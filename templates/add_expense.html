@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Expense</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body class="center-page">
+
+    <!-- MAIN CONTAINER -->
+    <div class="form-container">
+
+        <div class="form-box">
+
+            <h1>➖ Add Expense</h1>
+
+            <p class="subtitle">
+                Track your daily spending professionally
+            </p>
+
+            <form method="POST">
+
+                <!-- AMOUNT -->
+                <div class="input-group">
+
+                    <label>Expense Amount</label>
+
+                    <input type="number"
+                           name="amount"
+                           placeholder="Enter amount"
+                           required>
+
+                </div>
+
+                <!-- CATEGORY -->
+                <div class="input-group">
+
+                    <label>Category</label>
+
+                    <input type="text"
+                           name="category"
+                           placeholder="Food / Travel / Shopping"
+                           required>
+
+                </div>
+
+                <!-- BUTTON -->
+                <button type="submit">
+                    Add Expense
+                </button>
+
+            </form>
+
+            <!-- BACK -->
+            <a href="/" class="back-btn">
+                ⬅ Back To Dashboard
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
